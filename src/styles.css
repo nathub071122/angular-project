@@ -10,6 +10,7 @@
 
 body {
   margin: 0;
+  background-color:cyan;
 }
 
 .container {
@@ -101,7 +102,7 @@ label {
 
 .fancy-button i.material-icons {
   color: #1976d2;
-  padding-right: 4px;
+  padding-right: 5px;
 }
 
 /* Top Bar */
