@@ -7,13 +7,13 @@ import { Product } from './productsRepository';
 export class CartService {
   items : Product[] = [];
   constructor() { }
-  addtoCart(product:Product){
+  addtoCartInService(product:Product){
     this.items.push(product);
   }
-  getItems(){
+  getItemsInService(){
     return this.items;
   }
-  clearCart(){
+  clearCartInService(){
     this.items = [];
     return this.items;
   }

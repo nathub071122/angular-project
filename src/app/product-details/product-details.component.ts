@@ -37,7 +37,7 @@ const routeParams = this.activatedRoute.snapshot.paramMap;
 const productIdFromRoute = Number(routeParams.get('productId'));
 this.product = products.find(productFromArray => productFromArray.id === productIdFromRoute); 
 // alert(productIdFromRoute);
-console.log("Component initialized!")
+console.log("Component initialized!");
 }
 
 
@@ -47,4 +47,9 @@ console.log("Component initialized!")
 // test():void {
 //   // this.activatedRoute
 // }
+
+addToCartInComponent(product: Product){
+  this.cartService.addtoCartInService(product);
+  alert("Product sent to cart!");
+}
 }
