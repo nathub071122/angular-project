@@ -40,8 +40,6 @@ this.product = products.find(productFromArray => productFromArray.id === product
 console.log("Component initialized!");
 }
 
-
-
 // void test(){
 // }
 // test():void {
@@ -49,8 +47,8 @@ console.log("Component initialized!");
 // }
 
 addToCartInComponent(product: Product){
-  alert("Inside add to cart!")
+  // alert("Inside add to cart!")
   this.cartService.addtoCartInService(product);
-  alert("Product sent to cart!");
+  // alert("Product sent to cart!");
 }
 }
