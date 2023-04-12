@@ -22,7 +22,7 @@ export interface Product {
   {
     id: 3,
     name: 'Phone Standard',
-    price: 299,
+    price: 2990,
     description: ''
   }
 ];

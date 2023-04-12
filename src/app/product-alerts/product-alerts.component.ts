@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component,EventEmitter,Input, Output } from "@angular/core";
+import { Product } from "../products";
 
 @Component({
   selector: 'app-product-alerts',
@@ -6,5 +7,7 @@ import { Component } from "@angular/core";
   styleUrls: ['./product-alerts.component.css']
 })
 export class ProductAlertsComponent {
-
+  // property product should be passed as input from the parent component.
+@Input() product! : Product;
+@Output() notifyEventEmitterInChild = new EventEmitter();
 }

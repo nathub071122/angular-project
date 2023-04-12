@@ -15,6 +15,10 @@ share() {
   window.alert('Share the product!');
   // alert('Share the product');
 }
+// event hanlder in the parent component which handles the information from the event emitted by the child component.
+onNotifyHandlerInParent() {
+  window.alert("You will be alerted on offers for the product!!")
+}
 }
 
 
