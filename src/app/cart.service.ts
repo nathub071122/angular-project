@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Product } from './productsRepository';
 
@@ -5,8 +6,10 @@ import { Product } from './productsRepository';
   providedIn: 'root'
 })
 export class CartService {
+  // in memory store / volatile
   items : Product[] = [];
-  constructor() { }
+  // HttpClient helps access REST Endpoints.
+  constructor(private httpClient : HttpClient) { }
   addtoCartInService(product:Product){
     this.items.push(product);
   }
@@ -16,5 +19,9 @@ export class CartService {
   clearCartInService(){
     this.items = [];
     return this.items;
+  }
+  getShippingPrices(){
+    // return this.httpClient.get('http://localhost:8080/shipping');
+    return this.httpClient.get<{type:string,price:number}[]>('./assets/shipping.json');
   }
 }
