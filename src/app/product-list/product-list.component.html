@@ -6,9 +6,10 @@ This is the products list component.
 <!-- *ngFor is the structural directive -->
 <div *ngFor="let product of products">
   <h3>
-    <a [title] = "product.name + ' details'">
+    <a [title] = "product.name + ' details'"
+    [routerLink] = "['/products', product.id]">
     <!-- {{ string interpolation }} -->
-    {{product.name}}
+    {{product.id}} - {{product.name}}
     </a>
   </h3>
     <p *ngIf='product.description'>
