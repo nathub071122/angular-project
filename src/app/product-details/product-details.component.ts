@@ -49,6 +49,7 @@ console.log("Component initialized!");
 // }
 
 addToCartInComponent(product: Product){
+  alert("Inside add to cart!")
   this.cartService.addtoCartInService(product);
   alert("Product sent to cart!");
 }
