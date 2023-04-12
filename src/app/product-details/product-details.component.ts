@@ -1,6 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
+import {Product, products} from '../products';
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductDetailsComponent implements OnInit {
 
+  product:Product | undefined;
 // Java vs Typescript
 // property
 // private ActivatedRoute activatedRoute;
@@ -32,6 +33,7 @@ ngOnInit(): void {
 const routeParams = this.activatedRoute.snapshot.paramMap;
 // get the product id from the map
 const productIdFromRoute = Number(routeParams.get('productId'));
+this.product = products.find(productFromArray => productFromArray.id === productIdFromRoute); 
 // alert(productIdFromRoute);
 console.log("Component initialized!")
 }
