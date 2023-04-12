@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 // import {productsFromFile} from '../products'
-import {products} from '../products'
+import {products} from '../productsRepository'
 
+//Annotations / Decorator
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
