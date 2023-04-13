@@ -7,3 +7,18 @@
 <p>
   <a routerLink='/shipping'>Shipping Costs</a>
 </p>
+
+<!-- assign the formgroup controls in the ts file. -->
+<form 
+[formGroup] = "checkoutForm"
+(ngSubmit)="onCheckout()">
+<div>
+  <label for="name">Name</label>
+  <input id="name" type ="text" formControlName="nameFormControl">
+</div>
+<div>
+  <label for="address">Address</label>
+  <input id="address" type ="text" formControlName="addressFormControl">
+</div>
+  <button class="button" type="submit"> Place Order </button>
+</form>
